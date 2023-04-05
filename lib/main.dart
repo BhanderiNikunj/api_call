@@ -1,4 +1,4 @@
-import 'package:api_call/Screen/Detail/View/DetailScreen.dart';
+ import 'package:api_call/Screen/Detail/View/DetailScreen.dart';
 import 'package:api_call/Screen/Product/View/ProductScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -7,8 +7,8 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context) => const ProductScreen(),
-        'detail':(context) => const DetailScreen(),
+        '/':(context) => ProductScreen(),
+        'detail':(context) => DetailScreen(),
       },
     ),
   );

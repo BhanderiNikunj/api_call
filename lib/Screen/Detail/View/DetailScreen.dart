@@ -9,9 +9,7 @@ class DetailScreen extends StatefulWidget {
 }
 
 class _DetailScreenState extends State<DetailScreen> {
-
   ApiHelper apiHelper = ApiHelper();
-
 
   @override
   void initState() {
@@ -20,26 +18,16 @@ class _DetailScreenState extends State<DetailScreen> {
     apiHelper.ApiCall();
   }
 
-
-
-
   @override
   Widget build(BuildContext context) {
-    // int index = ModalRoute.of(context)!.settings.arguments as int;
-    int index = 5;
-
+    dynamic index = ModalRoute.of(context)!.settings.arguments;
 
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.black,
         body: Column(
           children: [
-            // Container(
-            //   height: 200,
-            //   width: 200,
-            //   decoration: ,
-            // ),
-            Image.network("${apiHelper.productList[index].image}")
+            Text("${apiHelper.productList[index].price}"),
           ],
         ),
       ),
